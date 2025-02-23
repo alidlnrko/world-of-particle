@@ -1,114 +1,228 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main menu of quantum</title>
-    <link rel="stylesheet" href="stylemain.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            width: 100%;
+            background-color: #333;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #aa00ff;
+            border-radius: 5px;
+        }
+
+        .logo {
+            color: #fff;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /* Бургер-меню */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+        }
+
+        .burger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        /* Анимация бургера */
+        .burger.open div:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .burger.open div:nth-child(2) {
+            opacity: 0;
+        }
+        .burger.open div:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Адаптивность */
+        @media screen and (max-width: 768px) {
+            .burger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                padding: 15px 0;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-links li {
+                margin: 10px 0;
+            }
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-link {
+            background-color: #aa00ff;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-link:hover {
+            background-color: #9c00cc;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <nav class="navbar">
-        <a href="#" class="logo">World of Particles</a>
-        <ul class="nav-links">
-            <li><a href="https://alidlnrko.github.io/World-of-Particles-lessons-/">уроки</a></li>
-            <li><a href="#about">О нас</a></li>
-            <li><a href="#services">лаборатории</a></li>
-        </ul>
-        <div class="burger">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </nav>
-</header>
-
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">World of Particles</a>
+            <ul class="nav-links">
+                <li><a href="https://alidlnrko.github.io/World-of-Particles-lessons-/">уроки</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">лаборатории</a></li>
+            </ul>
+            <div class="burger">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
 
     <main>
         <section id="about" class="about">
             <div class="container">
-                <h2>о нас</h2>
+                <h2>О нас</h2>
                 <p>Исследуйте мир частиц и квантовой механики на нашем сайте ⚛</p>
             </div>
         </section>
 
         <section id="services" class="services">
             <div class="container">
-                <h2>лаборатории/игры</h2>
+                <h2>Лаборатории / Игры</h2>
                 <div class="cards-container">
                     <div class="card">
                         <h3>Кот Шрёдингера</h3>
-                        <p>Эксперимент с котом Шрёдингера — это мысленный эксперимент, предложенный физиком Эрвином Шрёдингером, чтобы показать странности квантовой механики.</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-/" class="card-link">хочу узнать.</a>
+                        <p>Мысленный эксперимент Шрёдингера.</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-/" class="card-link">Подробнее</a>
                     </div>
                     <div class="card">
                         <h3>Квантовое туннелирование</h3>
-                        <p>Наблюдайте, как частица преодолевает потенциальный барьер!</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-2/" class="card-link">хочу узнать.!</a>
-                    </div>
-                    <div class="card">
-                        <h3>Двойной щелевой эксперимент</h3>
-                        <p>Наблюдайте за интерференцией частиц и волн!</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-y-3/" class="card-link">хочу узнать.</a>
-                    </div>
-                    <div class="card">
-                        <h3>Квантовая суперпозиция</h3>
-                        <p>Наблюдайте, как частица находится во всех состояниях одновременно!.</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-4/" class="card-link">хочу узнать.</a>
-                    </div>
-                    <div class="card">
-                        <h3>Квантовая запутанность</h3>
-                        <p>Наблюдайте, как состояния двух частиц связаны, даже если они находятся далеко друг от друга!</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-6/" class="card-link">хочу узнать.</a>
-                    </div>
-                    <div class="card">
-                        <h3>Неопределённость Гейзенберга</h3>
-                        <p>Попробуйте измерить положение и импульс частицы. Чем точнее одно измерение, тем менее точное другое!</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-7/" class="card-link">хочу узнать.</a>
-                    </div>
-                    <div class="card">
-                        <h3>Симуляция радиоактивного распада</h3>
-                        <p>Наблюдайте за случайным распадом атомов и зависимостью их количества от времени.</p>
-                        <a href="https://alidlnrko.github.io/nuclear-virtual-laboratory1/" class="card-link">хочу узнать.</a>
-                    </div>
-                    <div class="card">
-                        <h3>Симуляция ядерной цепной реакции</h3>
-                        <p>Наблюдайте за цепной реакцией деления ядер урана-235.</p>
-                        <a href="https://alidlnrko.github.io/nuclear-virtual-laboratory2/" class="card-link">хочу узнать.</a>
-                    </div>
-                    <div class="card">
-                        <h3>Симуляция атома</h3>
-                        <p>Взаимодействуйте с атомом, меняйте количество протонов, нейтронов и электронов. Узнайте заряд, массовое число и стабильность атома.</p>
-                        <a href="https://alidlnrko.github.io/nuclear-virtual-laboratory-3/" class="card-link">хочу узнать.</a>
-                    </div>
-                    <div class="card">
-                        <h3>Лекции</h3>
-                        <p>Изучайте квантовую,ядерную и элементарную физику!</p>
-                        <a href="c:\Users\user\Desktop\ib project 2024-2025\web\first_lesson.html" class="card-link">хочу узнать.</a>
+                        <p>Частица проходит через барьер.</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-2/" class="card-link">Подробнее</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Добавление блока с викторинами -->
         <section id="quizzes" class="quizzes">
             <div class="container">
                 <h2>Викторины</h2>
                 <div class="cards-container">
                     <div class="card">
-                        <h3>Викторина по квантовой физике</h3>
-                        <p>Проверьте свои знания в квантовой физике.</p>
+                        <h3>Квантовая физика</h3>
+                        <p>Проверьте свои знания.</p>
                         <a href="https://alidlnrko.github.io/index/" class="card-link">Пройти викторину</a>
-                    </div>
-                    <div class="card">
-                        <h3>Викторина по ядерной физике</h3>
-                        <p>Проверьте свои знания в ядерной физике.</p>
-                        <a href="https://alidlnrko.github.io/index2/" class="card-link">Пройти викторину</a>
-                    </div>
-                    <div class="card">
-                        <h3>Викторина по всемирной истории</h3>
-                        <p>Проверьте свои знания в области всемирной истории.</p>
-                        <a href="https://alidlnrko.github.io/index3/" class="card-link">Пройти викторину</a>
                     </div>
                 </div>
             </div>
@@ -120,6 +234,15 @@
             <p>&copy; 2024 World of Particles. All rights reserved.</p>
         </div>
     </footer>
-    
+
+    <script>
+        const burger = document.querySelector('.burger');
+        const navLinks = document.querySelector('.nav-links');
+
+        burger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+            burger.classList.toggle('open');
+        });
+    </script>
 </body>
 </html>
