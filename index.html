@@ -66,7 +66,6 @@
             text-decoration: none;
         }
 
-        /* Бургер-меню */
         .burger {
             display: none;
             flex-direction: column;
@@ -81,7 +80,6 @@
             transition: transform 0.3s, opacity 0.3s;
         }
 
-        /* Анимация бургера */
         .burger.open div:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
         }
@@ -92,7 +90,6 @@
             transform: translateY(-8px) rotate(-45deg);
         }
 
-        /* Адаптивность */
         @media screen and (max-width: 768px) {
             .burger {
                 display: flex;
@@ -130,40 +127,50 @@
         }
 
         .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 30px;
-            padding: 20px;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
 
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
-        .card-link {
-            background-color: #aa00ff;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease;
-        }
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
 
-        .card-link:hover {
-            background-color: #9c00cc;
-        }
+.card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #555;
+}
 
+.card-link {
+    background-color: #aa00ff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.card-link:hover {
+    background-color: #9c00cc;
+}
         footer {
             background-color: #333;
             color: white;
@@ -171,7 +178,6 @@
             text-align: center;
         }
     </style>
-</head>
 <body>
     <header>
         <nav class="navbar">
@@ -192,37 +198,88 @@
     <main>
         <section id="about" class="about">
             <div class="container">
-                <h2>О нас</h2>
+                <h2>о нас</h2>
                 <p>Исследуйте мир частиц и квантовой механики на нашем сайте ⚛</p>
             </div>
         </section>
 
         <section id="services" class="services">
             <div class="container">
-                <h2>Лаборатории / Игры</h2>
+                <h2>лаборатории/игры</h2>
                 <div class="cards-container">
                     <div class="card">
                         <h3>Кот Шрёдингера</h3>
-                        <p>Мысленный эксперимент Шрёдингера.</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-/" class="card-link">Подробнее</a>
+                        <p>Эксперимент с котом Шрёдингера — это мысленный эксперимент, предложенный физиком Эрвином Шрёдингером, чтобы показать странности квантовой механики.</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-/" class="card-link">хочу узнать.</a>
                     </div>
                     <div class="card">
                         <h3>Квантовое туннелирование</h3>
-                        <p>Частица проходит через барьер.</p>
-                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-2/" class="card-link">Подробнее</a>
+                        <p>Наблюдайте, как частица преодолевает потенциальный барьер!</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-2/" class="card-link">хочу узнать.!</a>
+                    </div>
+                    <div class="card">
+                        <h3>Двойной щелевой эксперимент</h3>
+                        <p>Наблюдайте за интерференцией частиц и волн!</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-y-3/" class="card-link">хочу узнать.</a>
+                    </div>
+                    <div class="card">
+                        <h3>Квантовая суперпозиция</h3>
+                        <p>Наблюдайте, как частица находится во всех состояниях одновременно!.</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-laboratory-4/" class="card-link">хочу узнать.</a>
+                    </div>
+                    <div class="card">
+                        <h3>Квантовая запутанность</h3>
+                        <p>Наблюдайте, как состояния двух частиц связаны, даже если они находятся далеко друг от друга!</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-6/" class="card-link">хочу узнать.</a>
+                    </div>
+                    <div class="card">
+                        <h3>Неопределённость Гейзенберга</h3>
+                        <p>Попробуйте измерить положение и импульс частицы. Чем точнее одно измерение, тем менее точное другое!</p>
+                        <a href="https://alidlnrko.github.io/quantum-virtual-7/" class="card-link">хочу узнать.</a>
+                    </div>
+                    <div class="card">
+                        <h3>Симуляция радиоактивного распада</h3>
+                        <p>Наблюдайте за случайным распадом атомов и зависимостью их количества от времени.</p>
+                        <a href="https://alidlnrko.github.io/nuclear-virtual-laboratory1/" class="card-link">хочу узнать.</a>
+                    </div>
+                    <div class="card">
+                        <h3>Симуляция ядерной цепной реакции</h3>
+                        <p>Наблюдайте за цепной реакцией деления ядер урана-235.</p>
+                        <a href="https://alidlnrko.github.io/nuclear-virtual-laboratory2/" class="card-link">хочу узнать.</a>
+                    </div>
+                    <div class="card">
+                        <h3>Симуляция атома</h3>
+                        <p>Взаимодействуйте с атомом, меняйте количество протонов, нейтронов и электронов. Узнайте заряд, массовое число и стабильность атома.</p>
+                        <a href="https://alidlnrko.github.io/nuclear-virtual-laboratory-3/" class="card-link">хочу узнать.</a>
+                    </div>
+                    <div class="card">
+                        <h3>Лекции</h3>
+                        <p>Изучайте квантовую,ядерную и элементарную физику!</p>
+                        <a href="c:\Users\user\Desktop\ib project 2024-2025\web\first_lesson.html" class="card-link">хочу узнать.</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Добавление блока с викторинами -->
         <section id="quizzes" class="quizzes">
             <div class="container">
                 <h2>Викторины</h2>
                 <div class="cards-container">
                     <div class="card">
-                        <h3>Квантовая физика</h3>
-                        <p>Проверьте свои знания.</p>
+                        <h3>Викторина по квантовой физике</h3>
+                        <p>Проверьте свои знания в квантовой физике.</p>
                         <a href="https://alidlnrko.github.io/index/" class="card-link">Пройти викторину</a>
+                    </div>
+                    <div class="card">
+                        <h3>Викторина по ядерной физике</h3>
+                        <p>Проверьте свои знания в ядерной физике.</p>
+                        <a href="https://alidlnrko.github.io/index2/" class="card-link">Пройти викторину</a>
+                    </div>
+                    <div class="card">
+                        <h3>Викторина по всемирной истории</h3>
+                        <p>Проверьте свои знания в области всемирной истории.</p>
+                        <a href="https://alidlnrko.github.io/index3/" class="card-link">Пройти викторину</a>
                     </div>
                 </div>
             </div>
